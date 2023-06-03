@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Box, ChakraProvider, extendTheme } from "@chakra-ui/react";
 
-function App() {
-  const [count, setCount] = useState(0)
+const colors = {
+  brand: {
+    50: "#FFFAF0",
+    100: "#FEEBC8",
+    200: "#FBD38D",
+    300: "#F6AD55",
+    400: "#ED8936",
+    500: "#DD6B20",
+    600: "#C05621",
+    700: "#9C4221",
+    800: "#7B341E",
+    900: "#652B19",
+  },
+};
 
+const theme = extendTheme({ colors });
+
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <ChakraProvider theme={theme}>
+      <Box bg="brand.600" w="100vw" h="100vh">
+        <div>MARIOS ALVANOS</div>
+      </Box>
+    </ChakraProvider>
+  );
+};
 
-export default App
+export default App;
