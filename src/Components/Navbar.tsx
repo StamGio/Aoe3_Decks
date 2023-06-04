@@ -2,7 +2,13 @@ import { Img } from "@chakra-ui/react";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav
+      className="navbar navbar-expand-lg navbar-light "
+      style={{
+        background:
+          "linear-gradient(90deg, rgb(23, 8, 3), rgb(83, 36, 18) 40%, rgb(23, 8, 3))",
+      }}
+    >
       <div className="container-fluid">
         <a
           className="container-fluid d-flex justify-content-center align-items-center"
