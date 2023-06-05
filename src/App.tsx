@@ -1,7 +1,13 @@
+// Chakra Ui imports
 import { Grid, GridItem, Show } from "@chakra-ui/react";
-import Navbar from "./Components/Navbar.tsx";
 
-const App = () => {
+// Components Imports
+import Navbar from "./Components/Navbar";
+import CountryList from "./Components/CivilizationsList";
+
+const civilizations = ["civ 1", "civ 2", "civ 3"];
+
+const App: React.FC = () => {
   return (
     <Grid
       templateAreas={{
@@ -17,7 +23,8 @@ const App = () => {
       </GridItem>
       <Show above="lg">
         <GridItem pl="2" bg="pink.300" area={"aside"}>
-          Aside
+          <h1>List of Civilizations</h1>
+          <CountryList civilizations={civilizations} />
         </GridItem>
       </Show>
       <GridItem pl="2" bg="green.300" area={"main"}>

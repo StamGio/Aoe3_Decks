@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import "./index.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 // Chakra UI imports
 import { ChakraProvider } from "@chakra-ui/react";
