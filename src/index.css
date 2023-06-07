@@ -1,3 +1,24 @@
+/* General */
+
+.styled-h2 {
+  text-align: center;
+  color: #ebc837;
+  font-family: "TrajanPro";
+  letter-spacing: 0.00938em;
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.styled-h4 {
+  color: #ebc837;
+  font-family: "TrajanPro";
+  letter-spacing: 0.00938em;
+  margin-left: 2rem;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
 /* Navbar */
 
 .bordercolor {
