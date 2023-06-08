@@ -6,37 +6,66 @@ import Navbar from "./Components/Navbar";
 import CivilizationsList from "./Components/CivilizationsList";
 
 //////////////////////  Civilitations Array /////////////////////////
-
-// Vanilla
-const vanillaCivs = [
-  "British",
-  "Dutch",
-  "French",
-  "Germans",
-  "Ottoman",
-  "Portuguese",
-  "Russians",
-  "Spanish",
+const dlcs = [
+  {
+    name: "Vanilla",
+    civilizations: [
+      { name: "British", photo: "British.png" },
+      { name: "Dutch", photo: "Dutch.png" },
+      { name: "French", photo: "French.png" },
+      { name: "Germans", photo: "Germans.png" },
+      { name: "Ottoman", photo: "Ottoman.png" },
+      { name: "Portuguese", photo: "Portuguese.png" },
+      { name: "Russians", photo: "Russians.png" },
+      { name: "Spanish", photo: "Spanish.png" },
+    ],
+  },
+  {
+    name: "The War Chiefs",
+    civilizations: [
+      { name: "Aztecs", photo: "Aztecs.png" },
+      { name: "Haudenosaunee", photo: "Haudenosaunee.png" },
+      { name: "Lakota", photo: "Lakota.png" },
+    ],
+  },
+  {
+    name: "The Asian Dynasties",
+    civilizations: [
+      { name: "Chinese", photo: "Chinese.png" },
+      { name: "Indians", photo: "Indians.png" },
+      { name: "Japanese", photo: "Japanese.png" },
+    ],
+  },
+  {
+    name: "Definitive Edition",
+    civilizations: [
+      { name: "Incas", photo: "Incas.png" },
+      { name: "Swedes", photo: "Swedes.png" },
+    ],
+  },
+  {
+    name: "Definitive Edition II",
+    civilizations: [
+      { name: "Mexico", photo: "mexico.png" },
+      { name: "United States", photo: "united-states.png" },
+    ],
+  },
+  {
+    name: "The African Royalties",
+    civilizations: [
+      { name: "Ethiopians", photo: "ethiopians.png" },
+      { name: "Hausa", photo: "hausa.png" },
+    ],
+  },
+  {
+    name: "Knights of the Mediterranean",
+    civilizations: [
+      { name: "Italians", photo: "italians.png" },
+      { name: "Maltese", photo: "maltese.png" },
+    ],
+  },
 ];
 
-// The War Chiefs
-const warChiefsCivs = ["Aztecs", "Haudenosaunee", "Lacota"];
-
-// The Asian Dynastys
-
-const asianDynastiesCivs = ["Chinese", "Indians", "Japanese"];
-
-// Definitive Edition
-const definitiveCivs = ["Incas", "Swedesh"];
-
-// Definitive Edition II
-const definitive2Civs = ["Mexico", "United States"];
-
-//The  African Royaltes
-const africanRoyaltesCivs = ["Ethiopians", "Hausa"];
-
-// Knights of the Mediterranean
-const knightsOfMedCivs = ["Italians", "Maltese"];
 ////////////////////////////// End ///////////////////////////////////
 const App: React.FC = () => {
   return (
@@ -57,15 +86,7 @@ const App: React.FC = () => {
           <Text as="h2" className="styled-h2">
             Civilizations
           </Text>
-          <CivilizationsList
-            vanillaCivs={vanillaCivs}
-            warChiefsCivs={warChiefsCivs}
-            asianDynastiesCivs={asianDynastiesCivs}
-            definitiveCivs={definitiveCivs}
-            definitive2Civs={definitive2Civs}
-            africanRoyaltesCivs={africanRoyaltesCivs}
-            knightsOfMedCivs={knightsOfMedCivs}
-          />
+          <CivilizationsList dlcs={dlcs} />
         </GridItem>
       </Show>
       <GridItem pl="2" bg="green.300" area={"main"}>
