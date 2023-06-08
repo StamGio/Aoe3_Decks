@@ -46,22 +46,22 @@ const dlcs = [
   {
     name: "Definitive Edition II",
     civilizations: [
-      { name: "Mexico", photo: "mexico.png" },
-      { name: "United States", photo: "united-states.png" },
+      { name: "Mexicans", photo: "Mexicans.png" },
+      { name: "United States", photo: "United-states.png" },
     ],
   },
   {
     name: "The African Royalties",
     civilizations: [
-      { name: "Ethiopians", photo: "ethiopians.png" },
-      { name: "Hausa", photo: "hausa.png" },
+      { name: "Ethiopians", photo: "Ethiopians.png" },
+      { name: "Hausa", photo: "Hausa.png" },
     ],
   },
   {
     name: "Knights of the Mediterranean",
     civilizations: [
-      { name: "Italians", photo: "italians.png" },
-      { name: "Maltese", photo: "maltese.png" },
+      { name: "Italians", photo: "Italians.png" },
+      { name: "Maltese", photo: "Maltese.png" },
     ],
   },
 ];

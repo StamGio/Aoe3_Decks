@@ -17,7 +17,7 @@ interface CivilizationsListProps {
 const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
   return (
     <>
-      <VStack align="flex-start">
+      <VStack align="flex-start" spacing={4}>
         {dlcs.map((dlc, index) => (
           <React.Fragment key={index}>
             <Text as="h4" className="styled-h4">
@@ -25,12 +25,18 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
             </Text>
             <List color="white" fontFamily="TrajanPro" colorScheme="#ebc837">
               {dlc.civilizations.map((civilization, civIndex) => (
-                <ListItem key={civIndex} display="flex" alignItems="center">
+                <ListItem
+                  key={civIndex}
+                  display="flex"
+                  alignItems="center"
+                  fontSize="2xl"
+                >
                   <Avatar
-                    size="sm"
+                    size="lg"
                     src={`src/assets/Images/Flags/${civilization.photo}`}
                     borderRadius="md"
-                    mr={2}
+                    mr={4}
+                    mb={4}
                   />
                   {civilization.name}
                 </ListItem>
