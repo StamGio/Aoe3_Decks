@@ -29,14 +29,18 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
                   key={civIndex}
                   display="flex"
                   alignItems="center"
-                  fontSize="2xl"
+                  fontSize="xl"
                 >
                   <Avatar
-                    size="lg"
+                    size="md"
                     src={`src/assets/Images/Flags/${civilization.photo}`}
                     borderRadius="md"
                     mr={4}
                     mb={4}
+                    css={{
+                      width: "50px",
+                      height: "30px",
+                    }}
                   />
                   {civilization.name}
                 </ListItem>
