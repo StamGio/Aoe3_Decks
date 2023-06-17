@@ -1,5 +1,12 @@
 import React from "react";
-import { List, ListItem, VStack, Text, Avatar } from "@chakra-ui/react";
+import {
+  List,
+  VStack,
+  Text,
+  Avatar,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 interface Civilization {
   name: string;
@@ -25,11 +32,15 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
             </Text>
             <List color="white" fontFamily="TrajanPro" colorScheme="#ebc837">
               {dlc.civilizations.map((civilization, civIndex) => (
-                <ListItem
+                <ChakraLink
                   key={civIndex}
+                  to={`/${civilization.name}`}
+                  as={Link}
+                  // href={`/${civilization.name}`}
                   display="flex"
                   alignItems="center"
                   fontSize="xl"
+                  _hover={{ color: "#ebc837", textDecoration: "underline" }}
                 >
                   <Avatar
                     size="md"
@@ -43,7 +54,7 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
                     }}
                   />
                   {civilization.name}
-                </ListItem>
+                </ChakraLink>
               ))}
             </List>
           </React.Fragment>

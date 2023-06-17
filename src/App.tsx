@@ -1,10 +1,12 @@
 // Chakra Ui imports
 import { Grid, GridItem, Show, Text } from "@chakra-ui/react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components Imports
 import Navbar from "./Components/Navbar";
 import CivilizationsList from "./Components/CivilizationsList";
 import backgroundImg from "../src/assets/Images/Background.jpg";
+import CivilizationsPage from "./Components/CivilizationsPage";
 //////////////////////  Civilitations Array /////////////////////////
 const dlcs = [
   {
@@ -69,49 +71,55 @@ const dlcs = [
 ////////////////////////////// End ///////////////////////////////////
 const App: React.FC = () => {
   return (
-    <Grid
-      templateAreas={{
-        base: `"nav" "main" "footer"`,
-        lg: `"nav nav"
+    <Router>
+      <Grid
+        templateAreas={{
+          base: `"nav" "main" "footer"`,
+          lg: `"nav nav"
                     "aside main"
                     "footer footer"`,
-      }}
-      color="blackAlpha.700"
-      gridTemplateColumns={{
-        base: "1fr",
-        lg: "1fr 5fr", // Adjust the column sizes as per your requirement
-      }}
-    >
-      <GridItem area={"nav"}>
-        <Navbar />
-      </GridItem>
-      <Show above="lg">
+        }}
+        color="blackAlpha.700"
+        gridTemplateColumns={{
+          base: "1fr",
+          lg: "1fr 5fr", // Adjust the column sizes as per your requirement
+        }}
+      >
+        <GridItem area={"nav"}>
+          <Navbar />
+        </GridItem>
+        <Show above="lg">
+          <GridItem
+            pl="2"
+            area={"aside"}
+            style={{
+              background:
+                "linear-gradient(180deg, rgb(23, 8, 3), rgb(83, 36, 18) 40%, rgb(23, 8, 3))",
+            }}
+          >
+            <Text as="h2" className="styled-h2">
+              Civilizations
+            </Text>
+            <CivilizationsList dlcs={dlcs} />
+          </GridItem>
+        </Show>
         <GridItem
           pl="2"
-          area={"aside"}
-          style={{
-            background:
-              "linear-gradient(180deg, rgb(23, 8, 3), rgb(83, 36, 18) 40%, rgb(23, 8, 3))",
-          }}
-        >
-          <Text as="h2" className="styled-h2">
-            Civilizations
-          </Text>
-          <CivilizationsList dlcs={dlcs} />
+          area={"main"}
+          bgImage={`url(${backgroundImg})`}
+          bgSize="cover"
+          bgPosition="center"
+          filter="blur(2px)  brightness(50%) "
+        ></GridItem>
+        <GridItem pl="2" bg="blue.300" area={"footer"}>
+          Footer
         </GridItem>
-      </Show>
-      <GridItem
-        pl="2"
-        area={"main"}
-        bgImage={`url(${backgroundImg})`}
-        bgSize="cover"
-        bgPosition="center"
-        filter="blur(2px)  brightness(50%) "
-      ></GridItem>
-      <GridItem pl="2" bg="blue.300" area={"footer"}>
-        Footer
-      </GridItem>
-    </Grid>
+      </Grid>
+
+      <Routes>
+        <Route path="/:name" element={<CivilizationsPage name="You" />} />
+      </Routes>
+    </Router>
   );
 };
 
