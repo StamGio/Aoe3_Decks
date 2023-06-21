@@ -7,6 +7,7 @@ import Navbar from "./Components/Navbar";
 import CivilizationsList from "./Components/CivilizationsList";
 import backgroundImg from "../src/assets/Images/Background.jpg";
 import CivilizationsPage from "./Components/CivilizationsPage";
+
 //////////////////////  Civilitations Array /////////////////////////
 const dlcs = [
   {
@@ -46,14 +47,14 @@ const dlcs = [
     ],
   },
   {
-    name: "Definitive Edition II",
+    name: "DLC I & II",
     civilizations: [
       { name: "Mexicans", photo: "Mexicans.png" },
       { name: "United States", photo: "United-states.png" },
     ],
   },
   {
-    name: "The African Royalties",
+    name: "The African Royals",
     civilizations: [
       { name: "Ethiopians", photo: "Ethiopians.png" },
       { name: "Hausa", photo: "Hausa.png" },
@@ -69,55 +70,68 @@ const dlcs = [
 ];
 
 ////////////////////////////// End ///////////////////////////////////
+const Layout: React.FC = () => {
+  return (
+    <Grid
+      templateAreas={{
+        base: `"nav" "main" "footer"`,
+        lg: `"nav nav"
+                    "aside main"
+                    "footer footer"`,
+      }}
+      color="blackAlpha.700"
+      gridTemplateColumns={{
+        base: "1fr",
+        lg: "1fr 5fr", // Adjust the column sizes as per your requirement
+      }}
+    >
+      <GridItem area={"nav"}>
+        <Navbar />
+      </GridItem>
+      <Show above="lg">
+        <GridItem
+          pl="2"
+          area={"aside"}
+          style={{
+            background:
+              "linear-gradient(180deg, rgb(23, 8, 3), rgb(83, 36, 18) 40%, rgb(23, 8, 3))",
+          }}
+          className="scroll"
+        >
+          <Text as="h2" className="styled-h2">
+            Civilizations
+          </Text>
+          <CivilizationsList dlcs={dlcs} />
+        </GridItem>
+      </Show>
+      <GridItem
+        area={"main"}
+        bgImage={`url(${backgroundImg})`}
+        bgSize="cover"
+        bgPosition="center"
+        filter="blur(1px)  brightness(63%) "
+      ></GridItem>
+      <GridItem pl="2" bg="blue.300" area={"footer"}>
+        Footer
+      </GridItem>
+    </Grid>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <Router>
-      <Grid
-        templateAreas={{
-          base: `"nav" "main" "footer"`,
-          lg: `"nav nav"
-                    "aside main"
-                    "footer footer"`,
-        }}
-        color="blackAlpha.700"
-        gridTemplateColumns={{
-          base: "1fr",
-          lg: "1fr 5fr", // Adjust the column sizes as per your requirement
-        }}
-      >
-        <GridItem area={"nav"}>
-          <Navbar />
-        </GridItem>
-        <Show above="lg">
-          <GridItem
-            pl="2"
-            area={"aside"}
-            style={{
-              background:
-                "linear-gradient(180deg, rgb(23, 8, 3), rgb(83, 36, 18) 40%, rgb(23, 8, 3))",
-            }}
-          >
-            <Text as="h2" className="styled-h2">
-              Civilizations
-            </Text>
-            <CivilizationsList dlcs={dlcs} />
-          </GridItem>
-        </Show>
-        <GridItem
-          pl="2"
-          area={"main"}
-          bgImage={`url(${backgroundImg})`}
-          bgSize="cover"
-          bgPosition="center"
-          filter="blur(2px)  brightness(50%) "
-        ></GridItem>
-        <GridItem pl="2" bg="blue.300" area={"footer"}>
-          Footer
-        </GridItem>
-      </Grid>
-
       <Routes>
-        <Route path="/:name" element={<CivilizationsPage name="You" />} />
+        <Route path="/" element={<Layout />} />
+        {dlcs.map((dlc) =>
+          dlc.civilizations.map((civilization) => (
+            <Route
+              key={civilization.name}
+              path={`/${civilization.name.toLowerCase()}`}
+              element={<CivilizationsPage name={civilization.name} />}
+            />
+          ))
+        )}
       </Routes>
     </Router>
   );

@@ -10,7 +10,7 @@ const Navbar = () => {
       }}
     >
       <div className="container-fluid d-flex justify-content-center align-items-center">
-        <a href="http://127.0.0.1:5173/#">
+        <a href="http://127.0.0.1:5173">
           <Img
             src="./src/assets/Images/aoe3_logo.png"
             alt="AOE3 Logo"
