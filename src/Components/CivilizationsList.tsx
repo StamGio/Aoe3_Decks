@@ -30,7 +30,11 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
             <Text as="h4" className="styled-h4">
               {dlc.name}
             </Text>
-            <List color="white" fontFamily="TrajanPro" colorScheme="#ebc837">
+            <List
+              color="whiteAlpha.800"
+              fontFamily="TrajanPro"
+              colorScheme="#ebc837"
+            >
               {dlc.civilizations.map((civilization, civIndex) => (
                 <ChakraLink
                   key={civIndex}
@@ -40,7 +44,7 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
                   display="flex"
                   alignItems="center"
                   fontSize="xl"
-                  _hover={{ color: "#ebc837", textDecoration: "underline" }}
+                  _hover={{ color: "#ebc837" }}
                 >
                   <Avatar
                     size="md"

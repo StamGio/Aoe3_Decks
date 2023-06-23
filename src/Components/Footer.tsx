@@ -35,8 +35,8 @@ const Footer = () => {
             </Link>{" "}
             using assets from <i>Age of Empires III: Definitive Edition</i>, and
             it is not endorsed by or affiliated with <i>Microsoft</i>.
-          </Text>
-          <Text mt={2} fontSize="sm">
+          </Text>{" "}
+          <Text mt={10} fontSize="sm">
             Inspired by{" "}
             <Link
               href="https://aoe3-companion.web.app/"
