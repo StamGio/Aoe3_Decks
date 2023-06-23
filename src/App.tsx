@@ -7,6 +7,11 @@ import Navbar from "./Components/Navbar";
 import CivilizationsList from "./Components/CivilizationsList";
 import backgroundImg from "../src/assets/Images/Background.jpg";
 import CivilizationsPage from "./Components/CivilizationsPage";
+import Footer from "./Components/Footer";
+
+//Libraries imports
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
 
 //////////////////////  Civilitations Array /////////////////////////
 const dlcs = [
@@ -70,6 +75,9 @@ const dlcs = [
 ];
 
 ////////////////////////////// End ///////////////////////////////////
+
+// Page Layout
+
 const Layout: React.FC = () => {
   return (
     <Grid
@@ -111,12 +119,14 @@ const Layout: React.FC = () => {
         bgPosition="center"
         filter="blur(1px)  brightness(63%) "
       ></GridItem>
-      <GridItem pl="2" bg="blue.300" area={"footer"}>
-        Footer
+      <GridItem area={"footer"}>
+        <Footer />
       </GridItem>
     </Grid>
   );
 };
+
+// Routing App
 
 const App: React.FC = () => {
   return (
