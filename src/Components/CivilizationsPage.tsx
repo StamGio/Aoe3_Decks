@@ -37,11 +37,10 @@ const CivilizationsPage: React.FC<CivilizationPageProps> = ({ name }) => {
           />
 
           <Heading as="h1" size="xl" textAlign="center" zIndex={1}>
-            Hi, {name}!
             <CivilizationInfo civilization={name} />
           </Heading>
         </Box>
-
+        <CivilizationInfo civilization="civilization" />
         <Footer />
       </Box>
     </>
