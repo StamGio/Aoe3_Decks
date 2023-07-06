@@ -1,4 +1,5 @@
-import { Avatar, Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Text, Image } from "@chakra-ui/react";
+import woodImage from "../assets/Images/wood.png";
 import React from "react";
 
 // Interface of Cicilization Data
@@ -89,38 +90,65 @@ const CivilizationInfo: React.FC<{ civilization: string }> = ({
   const data = civilizationData[civilization];
 
   return (
-    <Box padding="20px">
-      {data && (
+    <Box padding="30px" ml="100px" mr="80px">
+      {data && Object.keys(data).length > 0 ? (
         <>
-          <Heading as="h1" size="xl" textAlign="center">
-            <Avatar
-              src={`./src/assets/Images/Flags/${civilization}.png`}
-              size="xl"
-            />{" "}
-            {civilization}
+          <Heading
+            display="flex"
+            alignItems="center"
+            color="whiteAlpha.800"
+            fontFamily="TrajanPro"
+            bg={`url(${woodImage})`}
+            borderBottom="1px solid rgb(235, 200, 55)"
+            borderTop="1px solid rgb(235, 200, 55)"
+          >
+            <Box textAlign="left">
+              <Image
+                src={`./src/assets/Images/Flags/${civilization}.png`}
+                alt="Civ Flag"
+                boxSize="100px"
+                width="200px"
+                objectFit="cover"
+                boxShadow="0px 0px 10px rgba(0, 0, 0, 0.4)"
+              />
+            </Box>
+            <Box flex="1" mr="15px" textAlign="right">
+              <Text as="h1" fontSize="5xl">
+                {""}
+                {civilization}
+              </Text>
+            </Box>
           </Heading>
-          {Object.entries(data).map(([key, value]) => (
-            <React.Fragment key={key}>
-              <Text
-                fontSize="16px"
-                lineHeight="1.5"
-                display="inline"
-                color="#ebc837"
-              >
-                {key
-                  .split(/(?=[A-Z])/)
-                  .join(" ")
-                  .trim()}{" "}
-                :
-              </Text>
-              <Text fontSize="16px" lineHeight="1.5">
-                {value}
-              </Text>
-            </React.Fragment>
-          ))}
+
+          <Box
+            textAlign="left"
+            maxWidth="980px"
+            padding="20px"
+            bg={`url(${woodImage})`}
+            borderBottom="1px solid rgb(235, 200, 55)"
+          >
+            {Object.entries(data).map(([key, value]) => (
+              <React.Fragment key={key}>
+                <Text
+                  fontSize="16px"
+                  lineHeight="1.5"
+                  display="inline"
+                  color="#ebc837"
+                >
+                  {key
+                    .split(/(?=[A-Z])/)
+                    .join(" ")
+                    .trim()}{" "}
+                  :
+                </Text>
+                <Text fontSize="16px" lineHeight="1.5">
+                  {value}
+                </Text>
+              </React.Fragment>
+            ))}
+          </Box>
         </>
-      )}
-      {!data && (
+      ) : (
         <Text fontSize="16px" lineHeight="1.5">
           No information available for this civilization.
         </Text>

@@ -56,6 +56,7 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
                       width: "50px",
                       height: "30px",
                     }}
+                    boxShadow="0px 0px 10px rgba(0, 0, 0, 0.4)"
                   />
                   {civilization.name}
                 </ChakraLink>
