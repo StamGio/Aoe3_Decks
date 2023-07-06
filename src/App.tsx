@@ -12,6 +12,7 @@ import Footer from "./Components/Footer";
 //Libraries imports
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
+import Flags from "./Components/Flags";
 
 //////////////////////  Civilitations Array /////////////////////////
 const dlcs = [
@@ -118,7 +119,9 @@ const Layout: React.FC = () => {
         bgSize="cover"
         bgPosition="center"
         filter="blur(1px)  brightness(63%) "
-      ></GridItem>
+      >
+        <Flags />
+      </GridItem>
       <GridItem area={"footer"}>
         <Footer />
       </GridItem>

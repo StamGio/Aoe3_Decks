@@ -90,17 +90,17 @@ const CivilizationInfo: React.FC<{ civilization: string }> = ({
   const data = civilizationData[civilization];
 
   return (
-    <Box padding="30px" ml="100px" mr="80px">
+    <Box padding="30px" ml="100px" mr="80px" color="whiteAlpha.800">
       {data && Object.keys(data).length > 0 ? (
         <>
           <Heading
             display="flex"
             alignItems="center"
-            color="whiteAlpha.800"
             fontFamily="TrajanPro"
             bg={`url(${woodImage})`}
             borderBottom="1px solid rgb(235, 200, 55)"
             borderTop="1px solid rgb(235, 200, 55)"
+            className="bordercolor"
           >
             <Box textAlign="left">
               <Image
@@ -112,7 +112,7 @@ const CivilizationInfo: React.FC<{ civilization: string }> = ({
                 boxShadow="0px 0px 10px rgba(0, 0, 0, 0.4)"
               />
             </Box>
-            <Box flex="1" mr="15px" textAlign="right">
+            <Box flex="1" mr="50px" textAlign="right">
               <Text as="h1" fontSize="5xl">
                 {""}
                 {civilization}
@@ -126,6 +126,8 @@ const CivilizationInfo: React.FC<{ civilization: string }> = ({
             padding="20px"
             bg={`url(${woodImage})`}
             borderBottom="1px solid rgb(235, 200, 55)"
+            borderTop="1px solid rgb(235, 200, 55)"
+            className="bordercolor"
           >
             {Object.entries(data).map(([key, value]) => (
               <React.Fragment key={key}>
