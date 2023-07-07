@@ -10,6 +10,11 @@ interface CivilizationData {
   RoyalGuardUnits: string;
   UniqueUnits: string;
   UniqueBuildings?: string;
+  UniqueResourses?: string;
+  CultureBonus?: string;
+  Wonders?: string;
+  AgeUpAlliances?: string;
+  Ceremonies?: string;
 }
 
 // Object Generator
@@ -19,7 +24,12 @@ const generateCivilizationData = (
   CivilizationBonus: string,
   RoyalGuardUnits: string,
   UniqueUnits: string,
-  UniqueBuildings?: string // ? : Not necessery parameter
+  UniqueBuildings?: string, // ? : Not necessery parameter
+  UniqueResourses?: string,
+  CultureBonus?: string,
+  Wonders?: string,
+  AgeUpAlliances?: string,
+  Ceremonies?: string
 ): CivilizationData => ({
   History,
   Characteristics,
@@ -27,6 +37,11 @@ const generateCivilizationData = (
   RoyalGuardUnits,
   UniqueUnits,
   UniqueBuildings,
+  UniqueResourses,
+  CultureBonus,
+  Wonders,
+  AgeUpAlliances,
+  Ceremonies,
 });
 
 // Civ Data
@@ -80,6 +95,19 @@ const civilizationData: Record<string, CivilizationData> = {
     "German Church , Towers"
   ),
   // Add data for other civilizations
+  Aztecs: generateCivilizationData(
+    "A powerful central American nation that was well known for its conquest of neighbors. Their power was centered in Tenochtitlan, present day Mexico city.",
+    "Characteristics",
+    "Warrior priests can occupy at the Community Plaza for greater effect",
+    " ",
+    "Arrow Knights, Coyote Runner, Eagle Runner Knight, Jaguar Prowl Knight, Otontin Slinger, Puma Spearman and Skull Knight",
+    "Nobles Hut provides excellent defense and trains elite Aztec units",
+    " ",
+    " ",
+    " ",
+    " ",
+    "Healing Ceremony and Garland War Ceremony"
+  ),
 };
 
 // Main Part
