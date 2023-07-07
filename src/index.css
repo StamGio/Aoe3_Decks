@@ -73,3 +73,12 @@
     );
   }
 }
+
+/* bgImage={`url(${backgroundImg})`} */
+
+.bg-image {
+  background-image: url(${backgroundImg});
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px) brightness(63%);
+}

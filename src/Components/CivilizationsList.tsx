@@ -8,6 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
+// Interfaces
 interface Civilization {
   name: string;
   photo: string;
@@ -17,7 +18,7 @@ interface DLC {
   name: string;
   civilizations: Civilization[];
 }
-interface CivilizationsListProps {
+export interface CivilizationsListProps {
   dlcs: DLC[];
 }
 

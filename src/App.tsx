@@ -1,5 +1,5 @@
 // Chakra Ui imports
-import { Grid, GridItem, Show, Text } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Show, Text } from "@chakra-ui/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components Imports
@@ -116,11 +116,12 @@ const Layout: React.FC = () => {
       <GridItem
         area={"main"}
         bgImage={`url(${backgroundImg})`}
-        bgSize="cover"
+        bgSize="100% 100%"
         bgPosition="center"
-        filter="blur(1px)  brightness(63%) "
+
+        // filter="blur(1px) brightness(63%)"
       >
-        <Flags />
+        <Flags dlcs={dlcs} backgroundImg={backgroundImg} />
       </GridItem>
       <GridItem area={"footer"}>
         <Footer />
