@@ -56,7 +56,7 @@ const dlcs = [
     name: "DLC I & II",
     civilizations: [
       { name: "Mexicans", photo: "Mexicans.png" },
-      { name: "United States", photo: "United-states.png" },
+      { name: "UnitedStates", photo: "United-states.png" },
     ],
   },
   {
