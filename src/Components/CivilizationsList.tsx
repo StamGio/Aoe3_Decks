@@ -25,7 +25,12 @@ export interface CivilizationsListProps {
 const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
   return (
     <>
-      <VStack align="flex-start" spacing={4} overflowY="auto" maxHeight="800px">
+      <VStack
+        align="flex-start"
+        spacing={4}
+        overflowY="auto"
+        maxHeight="1100px"
+      >
         {dlcs.map((dlc, index) => (
           <React.Fragment key={index}>
             <Text as="h4" className="styled-h4">

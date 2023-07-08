@@ -226,7 +226,7 @@ const civilizationData: Record<string, CivilizationData> = {
     " "
   ),
 
-  UnitedStates: generateCivilizationData(
+  "United States": generateCivilizationData(
     "The land of opportunity provided a new world for people from many nations, creating the famous melting pot of cultures. Expanding from militia forces skilled in skirmishing tactics and marksmanship to a professional army, the United States of America ensured its independence and impressive road to prosperity",
     " ",
     "Minutemen levies can be called repeatedly from Town Centers and Outposts. Unlocks two Factory cards in the Industrial Age",
@@ -235,6 +235,71 @@ const civilizationData: Record<string, CivilizationData> = {
     "Can build a Meeting House and a State Capitol which may train Construction Wagons or research unique improvements",
     " ",
     "Starts with a General who can plant an Inspiring Flag and build Forts instead of Town Centers. Advances in Age by choosing a Federal State that unlocks two powerful unique cards. Has access to Saloons, Sloops, Steamers, and unique Outlaws",
+    " ",
+    " ",
+    " "
+  ),
+  Mexicans: generateCivilizationData(
+    "Born in fiery insurgency against Spanish colonial rule the young Mexican nation asserted itself against numerous revolutions and invasions",
+    " ",
+    "Livestock and Settlers may be tasked to Haciendas to produce resources or spawn units. Can revolt in earlier ages and return to Mexico afterwards. Gains an additional Padre hero early on",
+    "Chinaco (Charro), Salteador (Vigilante)",
+    "Padre, Insurgente, Salteador, Soldado, Chinaco",
+    "Can build Haciendas and a Cathedral which may research unique improvements",
+    " ",
+    " ",
+    " ",
+    " ",
+    " "
+  ),
+  Maltese: generateCivilizationData(
+    "One of the Mediterranean’s epitomes of a melting pot, Malta was strategically and financially important, and thus most of the surrounding powers coveted it, becoming a stronghold of the Knights Hospitaller",
+    " ",
+    "Maltese units gain additional hitpoints with each shipment and heal over time when idle",
+    "Crossbowman (Arbalesters) and Culverin (Basilisks)",
+    "Fire Thrower, Grand Master, Hospitaller, Sentinel",
+    "Hospital, Fixed Gun, Depot, Commandery",
+    " ",
+    " ",
+    " ",
+    " ",
+    " "
+  ),
+  Hausa: generateCivilizationData(
+    "The wealthy Hausa kingdoms were magnets for merchants, intellectuals, and enemies. Their extensive trade relations and diplomacy enabled them to exert powerful influence over vast stretches of West Africa. The Hausa kings and emirs deployed powerful cavalry armies to compete with each other or conquer neighboring empires",
+    " ",
+    "Gets a free Sanga Cattle with all shipments. Universities generate Influence, especially when built in a Kingdom (nearby one Town Center, Palace and Trading Post)",
+    " ",
+    "Maigadi, Griot, Fulani Archers, Raider and Lifidi Knight",
+    " ",
+    "Influence is a powerful resource spent primarily at the Palace on Native Warriors and Mercenaries. All unlocked features cost Influence. Generate it with Universities, Trading Posts and by controlling large herds of Livestock",
+    " ",
+    " ",
+    "Two new technologies at the University. Units/Builders at the Palace or Town Center",
+    " "
+  ),
+  Ethiopians: generateCivilizationData(
+    "Placed on the “Roof of Africa” Ethiopia was able to assert its influence over the surrounding lowlands, thriving in the safety of its mountains. A high ground badly needed against hostile attempts to take the empire down. Ethiopia and its King of kings defied not just its African neighbors but also European colonization attempts rendering it as one of the few African regions that eluded the talons of European imperial colonialism",
+    " ",
+    "Gets a free Mountain Monastery Builder with each Age-Up that can be built on top of Mines to gather Influence and Coin",
+    " ",
+    "Sebastopol Mortar, Abun, Gascenya, Shotel Warrior, Neftenya and Oromo Warrior",
+    " ",
+    "Influence is a powerful resource spent primarily at the Palace on Native Warriors and Mercenaries. All unlocked features cost Influence. Generate it with Mountain Monasteries, Trading Posts and by controlling large herds of Livestock.",
+    " ",
+    " ",
+    "Two new technologies at the Mountain Monastary. Units/Builders at the Palace or Town Center",
+    " "
+  ),
+  Italians: generateCivilizationData(
+    "Fabulously wealthy merchant republics, kingdoms, duchies, and even the Papacy had driven the Renaissance and dominated the trade networks of the Mediterranean. However, when the Italian polities were not engaged in conflicts abroad, they fought each other nearly incessantly, until the Risorgimento gave rise to the new Kingdom of Italy",
+    " ",
+    "Gets a free Settler with every technology and may research those at Economic Buildings in any age",
+    "Mortars (Galilean Mortars) and Culverins (Spingardes)",
+    "Architect, Bersagliere, Galleass, Pavisier",
+    "Basilica, Lombard",
+    " ",
+    " ",
     " ",
     " ",
     " "

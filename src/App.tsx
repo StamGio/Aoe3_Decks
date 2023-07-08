@@ -1,5 +1,5 @@
 // Chakra Ui imports
-import { Box, Grid, GridItem, Show, Text } from "@chakra-ui/react";
+import { Grid, GridItem, Show, Text } from "@chakra-ui/react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components Imports
@@ -56,7 +56,7 @@ const dlcs = [
     name: "DLC I & II",
     civilizations: [
       { name: "Mexicans", photo: "Mexicans.png" },
-      { name: "UnitedStates", photo: "United-states.png" },
+      { name: "United States", photo: "United%20States.png" },
     ],
   },
   {
@@ -121,7 +121,10 @@ const Layout: React.FC = () => {
 
         // filter="blur(1px) brightness(63%)"
       >
-        <Flags dlcs={dlcs} backgroundImg={backgroundImg} />
+        <Text as="h2" className="styled-h2">
+          Decks
+        </Text>
+        <Flags dlcs={dlcs} />
       </GridItem>
       <GridItem area={"footer"}>
         <Footer />
@@ -137,6 +140,7 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />} />
+        <Route path="/flags" element={<Flags dlcs={dlcs} />} />
         {dlcs.map((dlc) =>
           dlc.civilizations.map((civilization) => (
             <Route

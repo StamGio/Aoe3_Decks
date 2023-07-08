@@ -1,12 +1,11 @@
-import { Box, SimpleGrid, Image, HStack } from "@chakra-ui/react";
+import { Box, SimpleGrid, Link as ChakraLink } from "@chakra-ui/react";
 import { CivilizationsListProps } from "./CivilizationsList";
-
+import { Link as ReactRouterLink } from "react-router-dom";
 interface FlagsProps {
-  backgroundImg: string;
   dlcs: CivilizationsListProps["dlcs"];
 }
 
-const Flags: React.FC<FlagsProps> = ({ backgroundImg, dlcs }) => {
+const Flags: React.FC<FlagsProps> = ({ dlcs }) => {
   return (
     <SimpleGrid
       columns={5}
@@ -17,40 +16,43 @@ const Flags: React.FC<FlagsProps> = ({ backgroundImg, dlcs }) => {
     >
       {dlcs.flatMap((dlc) =>
         dlc.civilizations.map((civilization) => (
-          <Box
+          <ChakraLink
+            as={ReactRouterLink}
+            to={`/decks/${civilization.name.toLowerCase()}`}
             key={civilization.name}
-            background={`url(${backgroundImg})`}
-            bg={`url(src/assets/Images/Flags/${civilization.photo})`}
-            backgroundSize="cover"
-            backgroundPosition="center"
-            width="200px"
-            height="150px"
-            css={{
-              backgroundSize: "100% 100%",
-              opacity: 0.5,
-              backgroundRepeat: "no-repeat",
-            }}
-            borderRadius="md"
-          ></Box>
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            position="relative"
+            className="on-hover"
+            boxShadow="rgba(0, 0, 0, 0.6) 7px 5px 7px 0px"
+          >
+            {" "}
+            <Box
+              key={civilization.name}
+              bg={`url(src/assets/Images/Flags/${civilization.photo})`}
+              backgroundSize="cover"
+              backgroundPosition="center"
+              width="180px"
+              height="120px"
+              css={{
+                backgroundSize: "100% 100%",
+                opacity: 0.3,
+                backgroundRepeat: "no-repeat",
+                transition: "transform 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.1)",
+                  opacity: 1,
+                  boxShadow: "rgba(0, 0, 0, 0.6) 7px 5px 7px 0px", // Add boxShadow property
+                },
+              }}
+            >
+              <div className="shine-effect"></div>
+            </Box>
+          </ChakraLink>
         ))
       )}
     </SimpleGrid>
-
-    // <SimpleGrid minChildWidth="120px" spacing="40px">
-    //   {dlcs.map((dlc) => (
-    //     <Box key={dlc.name} height="100px">
-    //       {dlc.civilizations.map((civilization) => (
-    //         <Image
-    //           key={civilization.name}
-    //           src={`src/assets/Images/Flags/${civilization.photo}`}
-    //           alt={civilization.name}
-    //           boxSize="100px"
-    //           objectFit="cover"
-    //         />
-    //       ))}
-    //     </Box>
-    //   ))}
-    // </SimpleGrid>
   );
 };
 
