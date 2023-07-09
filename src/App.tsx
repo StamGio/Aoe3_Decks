@@ -140,16 +140,23 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />} />
+
+        {/* path for flags */}
         {dlcs.map((dlc) =>
           dlc.civilizations.map((civilization) => (
             <Route
               key={civilization.name}
               path={`/decks/${civilization.name.toLowerCase()}`}
-              element={<CivilizationsPage name={civilization.name} />}
+              element={
+                <CivilizationsPage
+                  name={civilization.name}
+                  showCivilizationInfo={false}
+                />
+              }
             />
           ))
         )}
-
+        {/* path for info */}
         {dlcs.map((dlc) =>
           dlc.civilizations.map((civilization) => (
             <Route

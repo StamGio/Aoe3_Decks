@@ -9,7 +9,7 @@ const Navbar = () => {
       <Box className="container-fluid d-flex justify-content-center align-items-center">
         <Link href="http://127.0.0.1:5173">
           <Img
-            src="./src/assets/Images/aoe3_logo.png"
+            src="../src/assets/Images/aoe3_logo.png"
             alt="AOE3 Logo"
             width="30"
             height="24"

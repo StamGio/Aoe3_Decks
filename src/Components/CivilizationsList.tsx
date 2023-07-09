@@ -46,7 +46,6 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
                   key={civIndex}
                   to={`/${civilization.name}`}
                   as={Link}
-                  // href={`/${civilization.name}`}
                   display="flex"
                   alignItems="center"
                   fontSize="xl"
@@ -59,8 +58,8 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
                     mr={4}
                     mb={4}
                     css={{
-                      width: "50px",
-                      height: "30px",
+                      width: "60px",
+                      height: "43px",
                     }}
                     boxShadow="0px 0px 10px rgba(0, 0, 0, 0.4)"
                   />

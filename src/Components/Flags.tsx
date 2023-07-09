@@ -25,7 +25,7 @@ const Flags: React.FC<FlagsProps> = ({ dlcs }) => {
             justifyContent="center"
             position="relative"
             className="on-hover"
-            boxShadow="rgba(0, 0, 0, 0.6) 7px 5px 7px 0px"
+            boxShadow="rgba(0, 0, 0, 0.4) 7px 5px 7px 0px"
           >
             {" "}
             <Box

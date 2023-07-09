@@ -6,12 +6,17 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import backgroundImg from "../assets/Images/Background.jpg";
 import CivilizationInfo from "./CivilizationInfo";
+import Decks from "./Decks";
 
 interface CivilizationPageProps {
   name: string;
+  showCivilizationInfo?: boolean;
 }
 
-const CivilizationsPage: React.FC<CivilizationPageProps> = ({ name }) => {
+const CivilizationsPage: React.FC<CivilizationPageProps> = ({
+  name,
+  showCivilizationInfo = true,
+}) => {
   return (
     <>
       <Box minHeight="100vh" display="flex" flexDirection="column">
@@ -37,7 +42,13 @@ const CivilizationsPage: React.FC<CivilizationPageProps> = ({ name }) => {
           />
 
           <Heading as="h1" size="xl" textAlign="center" zIndex={1}>
-            <CivilizationInfo civilization={name} />
+            {showCivilizationInfo ? (
+              <>
+                <CivilizationInfo civilization={name} />
+              </>
+            ) : (
+              <Decks />
+            )}
           </Heading>
         </Box>
 
