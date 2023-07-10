@@ -161,7 +161,7 @@ const App: React.FC = () => {
           dlc.civilizations.map((civilization) => (
             <Route
               key={civilization.name}
-              path={`/${civilization.name.toLowerCase()}`}
+              path={`/civilizations/${civilization.name.toLowerCase()}`}
               element={<CivilizationsPage name={civilization.name} />}
             />
           ))

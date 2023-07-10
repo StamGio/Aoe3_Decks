@@ -44,7 +44,7 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
               {dlc.civilizations.map((civilization, civIndex) => (
                 <ChakraLink
                   key={civIndex}
-                  to={`/${civilization.name}`}
+                  to={`/civilizations/${civilization.name}`}
                   as={Link}
                   display="flex"
                   alignItems="center"

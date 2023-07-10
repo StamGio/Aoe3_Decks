@@ -47,7 +47,7 @@ const CivilizationsPage: React.FC<CivilizationPageProps> = ({
                 <CivilizationInfo civilization={name} />
               </>
             ) : (
-              <Decks />
+              <Decks civilization={name} />
             )}
           </Heading>
         </Box>

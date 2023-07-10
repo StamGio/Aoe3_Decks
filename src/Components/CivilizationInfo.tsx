@@ -328,14 +328,15 @@ const CivilizationInfo: React.FC<{ civilization: string }> = ({
           >
             <Box textAlign="left">
               <Image
-                src={`./src/assets/Images/Flags/${civilization}.png`}
+                src={`../src/assets/Images/Flags/${civilization}.png`}
                 alt="Civ Flag"
-                boxSize="100px"
+                boxSize="130px"
                 width="200px"
                 objectFit="cover"
                 boxShadow="0px 0px 10px rgba(0, 0, 0, 0.4)"
               />
             </Box>
+
             <Box flex="1" mr="50px" textAlign="right">
               <Text as="h1" fontSize="5xl">
                 {""}
@@ -344,6 +345,7 @@ const CivilizationInfo: React.FC<{ civilization: string }> = ({
             </Box>
           </Heading>
 
+          {/* Body text */}
           <Box
             textAlign="left"
             maxWidth="980px"
