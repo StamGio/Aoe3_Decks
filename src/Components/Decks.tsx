@@ -83,7 +83,7 @@ const civPhotos: CivPhotos = {
   ],
 
   // Dlc 1 and 2
-  Mexican: [],
+  Mexicans: [],
   "United States": [
     { title: "Treaty", deck: "USAlategamenotp.png" },
     { title: "Treaty with Trade Posts", deck: "USAlategametp.png" },
@@ -102,10 +102,10 @@ interface DecksProps {
 const Decks: React.FC<DecksProps> = ({ civilization }) => {
   const civilizationPhotos = civPhotos[civilization];
 
+  const isEmpty = civilizationPhotos.length === 0;
+
   return (
     <Box padding="30px" ml="100px" mr="80px" color="whiteAlpha.800">
-      {/* Rest of your code */}
-
       <Heading
         display="flex"
         alignItems="center"
@@ -147,7 +147,22 @@ const Decks: React.FC<DecksProps> = ({ civilization }) => {
           borderTop="1px solid rgb(235, 200, 55)"
           className="bordercolor"
         >
-          {civilizationPhotos &&
+          {isEmpty ? (
+            // Display a text when there is no content
+            <Text
+              fontSize="xl"
+              lineHeight="1.5"
+              display="inline"
+              fontFamily="TrajanPro"
+            >
+              There are no decks available for this civilization at the moment,
+              but we are in the process of creating them and we hope to have
+              them ready soon! <br /> We appreciate your patience and interest .{" "}
+              <br />
+              If you want to share your thoughts or opinions with us, please
+              don’t hesitate to contact us!
+            </Text>
+          ) : (
             civilizationPhotos.map((photo, index) => (
               <Box
                 key={index}
@@ -164,7 +179,8 @@ const Decks: React.FC<DecksProps> = ({ civilization }) => {
                   mb="3rem"
                 />
               </Box>
-            ))}
+            ))
+          )}
         </Box>
       </VStack>
     </Box>
