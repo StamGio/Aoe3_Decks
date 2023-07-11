@@ -1,4 +1,15 @@
 /* General */
+.styled-h1 {
+  text-align: center;
+  color: #ebc837;
+  font-family: "TrajanPro";
+  letter-spacing: 0.00938em;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  letter-spacing: 3px;
+}
 
 .styled-h2 {
   text-align: center;

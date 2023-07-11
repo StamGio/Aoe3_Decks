@@ -121,7 +121,7 @@ const Layout: React.FC = () => {
 
         // filter="blur(1px) brightness(63%)"
       >
-        <Text as="h2" className="styled-h2">
+        <Text as="h1" className="styled-h1">
           Decks
         </Text>
         <Flags dlcs={dlcs} />

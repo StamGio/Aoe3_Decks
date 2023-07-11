@@ -2,7 +2,7 @@ import { Box, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 import woodImage from "../assets/Images/wood.png";
 
-type Civilization = "British" | "Germans" | "Dutch";
+// type Civilization = "British" | "Germans" | "Dutch" | "United States";
 
 interface CivPhoto {
   title: string;
@@ -15,6 +15,7 @@ interface CivPhotos {
 // Objects List
 
 const civPhotos: CivPhotos = {
+  // vanilla
   British: [
     { title: "Treaty No Grenadiers", deck: "TreatyNoGrenadiers.png" },
     { title: "Treaty Grenadiers", deck: "TreatyGrenadiers.png" },
@@ -24,13 +25,8 @@ const civPhotos: CivPhotos = {
     { title: "1 vs 1 Grenadier (Outdated)", deck: "1vs1Grenadier.png" },
     { title: "Late Game Water", deck: "LateGameWater.png" },
   ],
-  Germans: [
-    { title: "1 vs 1 Standard", deck: "1vs1std.png" },
-    { title: "Germany Late Game", deck: "germanylategame.png" },
-    { title: "Mercenaries Late Game", deck: "germanyMercenarieslategame.png" },
-  ],
   Dutch: [
-    { title: "1 vs 1 Standard", deck: "1vs1std.png" },
+    { title: "1 vs 1", deck: "1vs1std.png" },
     { title: "1 vs 1 Modern", deck: "1vs1modern.png" },
     { title: "1 vs 1 Old School", deck: "1vs1oldschool.png" },
     {
@@ -39,10 +35,68 @@ const civPhotos: CivPhotos = {
     },
     { title: "1 vs 1 Late Game Natives", deck: "lategamenatives.png" },
   ],
-};
+  French: [
+    { title: "1 vs 1", deck: "french1vs1.png" },
+    { title: "Treaty", deck: "frenchtreaty.png" },
+    { title: "Treaty With Natives", deck: "frenchtreatynatives.png" },
+  ],
+  Germans: [
+    { title: "1 vs 1 Standard", deck: "1vs1std.png" },
+    { title: "Germany Late Game", deck: "germanylategame.png" },
+    { title: "Mercenaries Late Game", deck: "germanyMercenarieslategame.png" },
+  ],
+  Ottoman: [
+    { title: "Treaty", deck: "ottomanlategame.png" },
+    { title: "Team Play", deck: "ottomanteamplay.png" },
+  ],
+  Portuguese: [
+    { title: "Treaty", deck: "portugaltreaty.png" },
+    { title: "Treaty Water", deck: "portugalwaterlategame.png" },
+  ],
+  Russians: [
+    { title: "Treaty", deck: "russialategame.png" },
+    { title: "1 vs 1 (Before 7/23)", deck: "russia1v1beforejulypatch.png" },
+  ],
+  Spanish: [{ title: "Treaty", deck: "Spainlategame.png" }],
+  // The war chiefs
+  Aztecs: [
+    { title: "Treaty", deck: "Treaty.png" },
+    { title: "1 vs 1", deck: "1vs1.png" },
+  ],
+  Haudenosaunne: [],
+  Lakota: [],
+  // Asian Dynasties
+  Chinese: [],
+  Indians: [],
+  Japanese: [
+    { title: "Treaty", deck: "japanlategame.png" },
+    { title: "1 vs 1 Water", deck: "japan1v1water.png" },
+    { title: "Samurai", deck: "japansamurai.png" },
+    { title: "Water Team", deck: "japanwaterteam.png" },
+  ],
+  // Definitive Edtion
+  Incas: [],
+  Swedes: [
+    { title: "Treaty", deck: "swedeslategame.png" },
+    { title: "Treaty Mercenaries", deck: "swedeslategamemercenaries.png" },
+    { title: "1 vs 1", deck: "sweden1v1std.png" },
+  ],
 
+  // Dlc 1 and 2
+  Mexican: [],
+  "United States": [
+    { title: "Treaty", deck: "USAlategamenotp.png" },
+    { title: "Treaty with Trade Posts", deck: "USAlategametp.png" },
+  ],
+  // African Royaltes
+  Ethiopians: [],
+  Hausa: [],
+  // Kings of mediterranean
+  Italians: [{ title: "Treaty", deck: "italylategame.png" }],
+  Maltese: [{ title: "Treaty", deck: "maltalategame.png" }],
+};
 interface DecksProps {
-  civilization: Civilization;
+  civilization: string;
 }
 
 const Decks: React.FC<DecksProps> = ({ civilization }) => {
@@ -51,6 +105,7 @@ const Decks: React.FC<DecksProps> = ({ civilization }) => {
   return (
     <Box padding="30px" ml="100px" mr="80px" color="whiteAlpha.800">
       {/* Rest of your code */}
+
       <Heading
         display="flex"
         alignItems="center"

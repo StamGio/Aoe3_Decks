@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Img, Link } from "@chakra-ui/react";
 import { BsBack } from "react-icons/bs";
 
+// Button function
 const Navbar = () => {
   const handleGoBack = () => {
     window.history.back();
