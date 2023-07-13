@@ -30,7 +30,7 @@ const CivilizationsPage: React.FC<CivilizationPageProps> = ({
           position="relative"
         >
           <Box
-            bgImage={`url(${backgroundImg})`}
+            background={`url(${backgroundImg}) no-repeat center center fixed`}
             bgSize="cover"
             bgPosition="center"
             position="absolute"

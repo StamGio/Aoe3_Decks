@@ -68,7 +68,7 @@ const civilizationData: Record<string, CivilizationData> = {
     "Begins with a Native Scout. Trains Coureurs des Bois instead of Settlers",
     "Skirmisher (Voltigeurs), Cuirassier (Gendarmes)",
     "Coureurs des Bois, Cuirassier",
-    "None"
+    ""
   ),
   Spanish: generateCivilizationData(
     "One of the greatest colonizers of North and South America was known for having acquired great wealth from the colonies during the 17th century. While Spain focused primarily on South America, developments in Europe often entangled it in the affairs of other colonizing nations",

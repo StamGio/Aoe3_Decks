@@ -63,7 +63,7 @@ const civPhotos: CivPhotos = {
     { title: "Treaty", deck: "Treaty.png" },
     { title: "1 vs 1", deck: "1vs1.png" },
   ],
-  Haudenosaunne: [],
+  Haudenosaunee: [],
   Lakota: [],
   // Asian Dynasties
   Chinese: [],

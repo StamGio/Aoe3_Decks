@@ -115,8 +115,8 @@ const Layout: React.FC = () => {
       </Show>
       <GridItem
         area={"main"}
-        bgImage={`url(${backgroundImg})`}
-        bgSize="100% 100%"
+        background={`url(${backgroundImg}) no-repeat center top / contain`}
+        bgSize="cover"
         bgPosition="center"
 
         // filter="blur(1px) brightness(63%)"
