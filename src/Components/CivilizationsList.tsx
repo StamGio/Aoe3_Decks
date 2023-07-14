@@ -53,7 +53,7 @@ const CivilizationsList: React.FC<CivilizationsListProps> = ({ dlcs }) => {
                 >
                   <Avatar
                     size="md"
-                    src={`src/assets/Images/Flags/${civilization.photo}`}
+                    src={`/Images/Flags/${civilization.photo}`}
                     borderRadius="md"
                     mr={4}
                     mb={4}

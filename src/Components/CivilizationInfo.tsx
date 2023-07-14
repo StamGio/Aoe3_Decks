@@ -1,5 +1,5 @@
 import { Box, Heading, Text, Image } from "@chakra-ui/react";
-import woodImage from "../assets/Images/wood.png";
+import woodImage from "/wood.png";
 import React from "react";
 
 // Interface of Cicilization Data
@@ -328,7 +328,7 @@ const CivilizationInfo: React.FC<{ civilization: string }> = ({
           >
             <Box textAlign="left">
               <Image
-                src={`../src/assets/Images/Flags/${civilization}.png`}
+                src={`/Images/Flags/${civilization}.png`}
                 alt="Civ Flag"
                 boxSize="130px"
                 width="200px"

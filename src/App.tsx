@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Components Imports
 import Navbar from "./Components/Navbar";
 import CivilizationsList from "./Components/CivilizationsList";
-import backgroundImg from "../src/assets/Images/background.jpg";
+import backgroundImg from "/background.jpg";
 import CivilizationsPage from "./Components/CivilizationsPage";
 import Footer from "./Components/Footer";
 
