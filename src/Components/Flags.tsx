@@ -30,7 +30,7 @@ const Flags: React.FC<FlagsProps> = ({ dlcs }) => {
             {" "}
             <Box
               key={civilization.name}
-              bg={`url(./src/assets/Images/Flags/${civilization.photo})`}
+              bg={`url(../src/assets/Images/Flags/${civilization.photo})`}
               backgroundSize="cover"
               backgroundPosition="center"
               width="180px"
