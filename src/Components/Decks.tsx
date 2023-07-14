@@ -22,7 +22,7 @@ const civPhotos: CivPhotos = {
     { title: "Treaty Sheeps", deck: "treatytheeps.png" },
     { title: "Treaty Stonemasons", deck: "treatystonemasons.png" },
     { title: "1 vs 1", deck: "1vs1.png" },
-    { title: "1 vs 1 Grenadier (Outdated)", deck: "1vs1trenadier.png" },
+    { title: "1 vs 1 Grenadier (Outdated)", deck: "1vs1grenadier.png" },
     { title: "Late Game Water", deck: "lategamewater.png" },
   ],
   Dutch: [
