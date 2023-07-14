@@ -24,7 +24,7 @@ const Navbar = () => {
       </Button>
 
       <Box className="container-fluid justify-content-center align-items-center">
-        <Link href="http://127.0.0.1:5173" marginRight={8}>
+        <Link href="https://aoe3-decks.vercel.app/" marginRight={8}>
           <Img src="../aoe3_logo.png" alt="AOE3 Logo" width="30" height="24" />
         </Link>
       </Box>
