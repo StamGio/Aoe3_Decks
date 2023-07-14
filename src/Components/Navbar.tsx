@@ -25,12 +25,7 @@ const Navbar = () => {
 
       <Box className="container-fluid justify-content-center align-items-center">
         <Link href="http://127.0.0.1:5173" marginRight={8}>
-          <Img
-            src="../assets/Images/aoe3_logo.png"
-            alt="AOE3 Logo"
-            width="30"
-            height="24"
-          />
+          <Img src="../aoe3_logo.png" alt="AOE3 Logo" width="30" height="24" />
         </Link>
       </Box>
     </Flex>
