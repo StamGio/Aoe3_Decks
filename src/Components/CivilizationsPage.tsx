@@ -4,7 +4,7 @@ import { Box, Heading } from "@chakra-ui/react";
 // Components
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import backgroundImg from "../assets/Images/Background.jpg";
+import backgroundImg from "../assets/Images/background.jpg";
 import CivilizationInfo from "./CivilizationInfo";
 import Decks from "./Decks";
 
