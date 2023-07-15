@@ -83,7 +83,7 @@ const Layout: React.FC = () => {
   return (
     <Grid
       templateAreas={{
-        base: `"nav" "main" "footer"`,
+        base: `"nav" "main" "aside" "footer"`,
         lg: `"nav nav"
                     "aside main"
                     "footer footer"`,
@@ -91,13 +91,16 @@ const Layout: React.FC = () => {
       color="blackAlpha.700"
       gridTemplateColumns={{
         base: "1fr",
-        lg: "1fr 5fr", // Adjust the column sizes as per your requirement
+      }}
+      gridTemplateRows={{
+        base: "auto", // Adjust the row size as needed
+        lg: "auto", // Adjust the row size as needed
       }}
     >
       <GridItem area={"nav"}>
         <Navbar />
       </GridItem>
-      <Show above="lg">
+      <Show>
         <GridItem
           pl="2"
           area={"aside"}
