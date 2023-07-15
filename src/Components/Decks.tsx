@@ -105,7 +105,13 @@ const Decks: React.FC<DecksProps> = ({ civilization }) => {
   const isEmpty = civilizationPhotos.length === 0;
 
   return (
-    <Box padding="30px" ml="100px" mr="80px" color="whiteAlpha.800">
+    // Heading
+    <Box
+      padding={{ base: "10px", md: "30px", lg: "30px" }}
+      ml={{ base: "20px", md: "100px", lg: "100px" }}
+      mr={{ base: "20px", md: "80px", lg: "80px" }}
+      color="whiteAlpha.800"
+    >
       <Heading
         display="flex"
         alignItems="center"
@@ -123,13 +129,12 @@ const Decks: React.FC<DecksProps> = ({ civilization }) => {
             width="200px"
             objectFit="cover"
             boxShadow="0px 0px 10px rgba(0, 0, 0, 0.4)"
-            mr="500px"
           />
         </Box>
 
         <Box flex="1" mr="50px" textAlign="right">
           <Text as="h1" fontSize="5xl">
-            {" "}
+            {""}
             {civilization}
           </Text>
         </Box>
@@ -137,15 +142,17 @@ const Decks: React.FC<DecksProps> = ({ civilization }) => {
 
       {/* Decks Photos */}
 
-      <VStack>
+      <VStack
+        padding={{ base: "20px 0 0 0", md: "20px 0 0 0", lg: "20px 0 0 0" }}
+      >
         <Box
           textAlign="left"
-          maxWidth="980px"
-          padding="20px"
+          padding={{ base: "10px", md: "20px", lg: "20px" }}
           bg={`url(${woodImage})`}
           borderBottom="1px solid rgb(235, 200, 55)"
           borderTop="1px solid rgb(235, 200, 55)"
           className="bordercolor"
+          maxWidth="980px"
         >
           {isEmpty ? (
             // Display a text when there is no content
