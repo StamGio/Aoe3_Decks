@@ -18,12 +18,12 @@ const civPhotos: CivPhotos = {
   // vanilla
   British: [
     { title: "Treaty No Grenadiers", deck: "treatynogrenadiers.png" },
-    { title: "Treaty Grenadiers", deck: "treatygrenadiers.png" },
-    { title: "Treaty Sheeps", deck: "treatysheeps.png" },
-    { title: "Treaty Stonemasons", deck: "treatystonemasons.png" },
-    { title: "1 vs 1", deck: "1vs1.png" },
-    { title: "1 vs 1 Grenadier (Outdated)", deck: "1vs1grenadier.png" },
-    { title: "Late Game Water", deck: "lategamewater.png" },
+    { title: "Treaty Grenadiers", deck: "treatygrenadiers.PNG" },
+    { title: "Treaty Sheeps", deck: "treatysheeps.PNG" },
+    { title: "Treaty Stonemasons", deck: "treatystonemasons.PNG" },
+    { title: "1 vs 1", deck: "1vs1.PNG" },
+    { title: "1 vs 1 Grenadier (Outdated)", deck: "1vs1grenadier.PNG" },
+    { title: "Late Game Water", deck: "lategamewater.PNG" },
   ],
   Dutch: [
     { title: "1 vs 1", deck: "1vs1std.png" },
@@ -36,9 +36,9 @@ const civPhotos: CivPhotos = {
     { title: "1 vs 1 Late Game Natives", deck: "lategamenatives.png" },
   ],
   French: [
-    { title: "1 vs 1", deck: "french1vs1.png" },
-    { title: "Treaty", deck: "frenchtreaty.png" },
-    { title: "Treaty With Natives", deck: "frenchtreatynatives.png" },
+    { title: "1 vs 1", deck: "french1vs1.PNG" },
+    { title: "Treaty", deck: "frenchtreaty.PNG" },
+    { title: "Treaty With Natives", deck: "frenchtreatynatives.PNG" },
   ],
   Germans: [
     { title: "1 vs 1 Standard", deck: "1vs1std.png" },
@@ -60,8 +60,8 @@ const civPhotos: CivPhotos = {
   Spanish: [{ title: "Treaty", deck: "spainlategame.png" }],
   // The war chiefs
   Aztecs: [
-    { title: "Treaty", deck: "treaty.png" },
-    { title: "1 vs 1", deck: "1vs1.png" },
+    { title: "Treaty", deck: "treaty.PNG" },
+    { title: "1 vs 1", deck: "1vs1.PNG" },
   ],
   Haudenosaunee: [],
   Lakota: [],
