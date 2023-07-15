@@ -91,10 +91,11 @@ const Layout: React.FC = () => {
       color="blackAlpha.700"
       gridTemplateColumns={{
         base: "1fr",
+        lg: "1fr 5fr",
       }}
       gridTemplateRows={{
-        base: "auto", // Adjust the row size as needed
-        lg: "auto", // Adjust the row size as needed
+        base: "auto",
+        lg: "auto",
       }}
     >
       <GridItem area={"nav"}>
