@@ -1,4 +1,11 @@
-import { Box, Button, Flex, Img, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Img,
+  Link,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { BsBack } from "react-icons/bs";
 
 // Button function
@@ -7,6 +14,8 @@ const Navbar = () => {
     window.history.back();
   };
 
+  const isButtonVisible = useBreakpointValue({ base: false, md: true });
+
   return (
     <Flex
       className="navbar navbar-expand-lg navbar-light bordercolor"
@@ -14,17 +23,19 @@ const Navbar = () => {
       paddingY={2}
       paddingX={{ base: 4, md: 8 }}
     >
-      <Button
-        className="justify-content-left align-items-left d-flex"
-        marginLeft={{ base: 2, md: 7 }}
-        marginRight={{ base: 2, md: 8 }}
-        color="#532412"
-        borderColor="#532412"
-        variant="outline"
-        onClick={handleGoBack}
-      >
-        <BsBack />
-      </Button>
+      {isButtonVisible && (
+        <Button
+          className="justify-content-left align-items-left d-flex"
+          marginLeft={{ base: 2, md: 7 }}
+          marginRight={{ base: 2, md: 8 }}
+          color="#532412"
+          borderColor="#532412"
+          variant="outline"
+          onClick={handleGoBack}
+        >
+          <BsBack />
+        </Button>
+      )}
 
       <Box
         className="container-fluid justify-content-center align-items-center"
