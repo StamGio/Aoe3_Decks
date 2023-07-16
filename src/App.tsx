@@ -1,6 +1,11 @@
 // Chakra Ui imports
 import { Grid, GridItem, Show, Text } from "@chakra-ui/react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  HashRouter as Router,
+  // BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 // Components Imports
 import Navbar from "./Components/Navbar";
