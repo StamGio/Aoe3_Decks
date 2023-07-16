@@ -125,15 +125,15 @@ const Decks: React.FC<DecksProps> = ({ civilization }) => {
           <Image
             src={`/Images/Flags/${civilization}.png`}
             alt="Civ Flag"
-            boxSize="130px"
-            width="200px"
+            boxSize={{ base: "70px", md: "130px", lg: "130px" }}
+            width={{ base: "100px", md: "200px", lg: "200px" }}
             objectFit="cover"
             boxShadow="0px 0px 10px rgba(0, 0, 0, 0.4)"
           />
         </Box>
 
         <Box flex="1" mr="50px" textAlign="right">
-          <Text as="h1" fontSize="5xl">
+          <Text as="h1" fontSize={{ base: "3xl", md: "5xl", lg: "5xl" }}>
             {""}
             {civilization}
           </Text>
