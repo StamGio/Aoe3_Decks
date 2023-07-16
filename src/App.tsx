@@ -1,10 +1,11 @@
 // Chakra Ui imports
 import { Grid, GridItem, Show, Text } from "@chakra-ui/react";
 import {
-  HashRouter as Router,
+  // HashRouter as Router,
   // BrowserRouter as Router,
   Routes,
   Route,
+  BrowserRouter,
 } from "react-router-dom";
 
 // Components Imports
@@ -146,7 +147,7 @@ const Layout: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />} />
 
@@ -176,7 +177,7 @@ const App: React.FC = () => {
           ))
         )}
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 
