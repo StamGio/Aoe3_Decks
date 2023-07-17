@@ -10,7 +10,7 @@ This website let you find ideas for the Decks of every civilizations in the game
 
 <!-- Demo -->
 
-Basic or funny decks in photos so you can try them and pick your favourites.
+Basic or funny decks in photos so you can try them and pick your favourites
 
 ### Example :
 
@@ -18,11 +18,11 @@ Basic or funny decks in photos so you can try them and pick your favourites.
 
 ![](https://aoe3-decks.vercel.app/Images/Decks/British/treatynogrenadiers.png)
 
-There is also an info section for basic informations about every civilizations .
+There is also section for basic informations about every civilizations
 
 ### Example
 
-#### French civilizations
+#### French civilization
 
 ![App Screenshot](https://cdn.discordapp.com/attachments/780560113437245440/1130452099294040075/image.png)
 
@@ -33,7 +33,7 @@ There is also an info section for basic informations about every civilizations .
 ## Contributing
 
 Contributions are always welcome at this project .
-There are no special rules because we just want to learn and evolve .
+There are no special rules because we just want to learn and evolve
 
 ## Feedback
 
